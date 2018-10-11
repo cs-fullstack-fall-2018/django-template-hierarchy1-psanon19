@@ -1,4 +1,6 @@
 {% extends "movie_app/base.html" %}
+
+
 {% block Movielist %}
 
 
@@ -23,9 +25,9 @@
 
 {% block Title %}
 <div  align="center">
-    <h1><b>Movie List</b></h1>
-    <br>
-    <a href="http://127.0.0.1:8000/dark/">Dark Theme</a>
+<h1><b>Movie List</b></h1>
+<br>
+<a href="http://127.0.0.1:8000/">Light Theme</a>
 </div>
 {% endblock %}
 
@@ -38,11 +40,11 @@
 
 {% if movie_model_list %}
 
-    <b>Movie Name</b>
-        {% for movies in movie_model_list %}
-        <a href="#"> <b>{{ movies.name }}</b></a>
-        <br/>
-        {% endfor %}
+<b>Movie Name</b>
+{% for movies in movie_model_list %}
+<a href="#"> <b>{{ movies.name }}</b></a>
+<br/>
+{% endfor %}
 
 
 {% else %}
@@ -53,10 +55,18 @@
 
 
 
+
 {% block style %}
 <style>
+
+    header{
+        color: #111111;
+    }
+
     body {
         font-family: "Lato", sans-serif;
+        background: #111111;
+        color: white;
     }
 
     .sidenav {
@@ -66,17 +76,19 @@
         z-index: 1;
         top: 0;
         left: 0;
-        background-color: #111;
+        background-color: gray;
+        border-width: thick;
+        border-color: hotpink;
         overflow-x: hidden;
         padding-top: 20px;
-        color: white;
+        color: black;
     }
 
     .sidenav a {
         padding: 6px 8px 6px 16px;
         text-decoration: none;
         font-size: 20px;
-        color: yellow;
+        color: hotpink;
         display: block;
     }
 
