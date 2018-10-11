@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Title</title>
+    {% block style %}
+    {% endblock %}
+</head>
+
+<body>
+
+<div class="main">
+
+    <div class="jumbotron">
+        {% block Title %}
+        {% endblock %}
+    </div>
+
+    {% block Movielist %}
+    {% endblock %}
+
+</div>
+
+<div class="sidenav">
+    {% block sidebar %}
+    {% endblock %}
+</div>
+
+
+<footer>
+    <div align="center">
+        {% block Footer %}
+        {% endblock %}
+        <br/>
+        <img src="https://cdn.dribbble.com/users/64389/screenshots/1539475/coin2.gif" width=100 height=100>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
